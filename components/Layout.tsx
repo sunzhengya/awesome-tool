@@ -1,7 +1,7 @@
 'use client'
 
 import { ReactNode } from 'react'
-import { Image, Menu, X } from 'lucide-react'
+import { Image, Menu, X, Type } from 'lucide-react'
 import { useState } from 'react'
 
 interface LayoutProps {
@@ -16,6 +16,12 @@ const tools = [
     name: '图片压缩',
     icon: Image,
     description: '压缩图片文件大小，支持多种格式'
+  },
+  {
+    id: 'image-watermark',
+    name: '图片水印',
+    icon: Type,
+    description: '为图片添加自定义文字水印'
   }
 ]
 

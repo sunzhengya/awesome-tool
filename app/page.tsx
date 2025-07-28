@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Layout from '@/components/Layout'
 import ImageCompressor from '@/components/ImageCompressor'
+import ImageWatermark from '@/components/ImageWatermark'
 
 export default function Home() {
   const [currentTool, setCurrentTool] = useState('image-compressor')
@@ -11,6 +12,8 @@ export default function Home() {
     switch (currentTool) {
       case 'image-compressor':
         return <ImageCompressor />
+      case 'image-watermark':
+        return <ImageWatermark />
       default:
         return <ImageCompressor />
     }
