@@ -1,7 +1,7 @@
 'use client'
 
 import { ReactNode } from 'react'
-import { Image, Menu, X, Type, Eraser } from 'lucide-react'
+import { Image, Menu, X, Type, Eraser, Palette } from 'lucide-react'
 import { useState } from 'react'
 
 interface LayoutProps {
@@ -28,6 +28,12 @@ const tools = [
     name: '去除水印',
     icon: Eraser,
     description: '选择区域去除图片中的水印'
+  },
+  {
+    id: 'id-photo-background',
+    name: '证件照换底色',
+    icon: Palette,
+    description: '一键更换证件照背景颜色'
   }
 ]
 
@@ -47,13 +53,13 @@ export default function Layout({ children, currentTool, setCurrentTool }: Layout
       </div>
 
       {/* Sidebar */}
-      <aside className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+      <aside className={`sidebar ${sidebarOpen ? 'open' : ''} flex flex-col`}>
         <div className="p-6">
           <h1 className="text-2xl font-bold mb-2">Awesome Tool</h1>
           <p className="text-blue-100 text-sm">实用工具集合</p>
         </div>
 
-        <nav className="mt-8">
+        <nav className="mt-8 flex-1">
           <h2 className="text-xs font-semibold text-blue-200 uppercase tracking-wider px-6 mb-4">
             工具列表
           </h2>
@@ -80,7 +86,7 @@ export default function Layout({ children, currentTool, setCurrentTool }: Layout
           })}
         </nav>
 
-        <div className="mt-auto p-6">
+        <div className="p-6 border-t border-blue-500 border-opacity-30">
           <div className="text-xs text-blue-200">
             © 2024 Awesome Tool
           </div>

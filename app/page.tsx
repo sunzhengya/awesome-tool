@@ -5,6 +5,7 @@ import Layout from '@/components/Layout'
 import ImageCompressor from '@/components/ImageCompressor'
 import ImageWatermark from '@/components/ImageWatermark'
 import ImageWatermarkRemover from '@/components/ImageWatermarkRemover'
+import IDPhotoBackgroundChanger from '@/components/IDPhotoBackgroundChanger'
 
 export default function Home() {
   const [currentTool, setCurrentTool] = useState('image-compressor')
@@ -17,6 +18,8 @@ export default function Home() {
         return <ImageWatermark />
       case 'watermark-remover':
         return <ImageWatermarkRemover />
+      case 'id-photo-background':
+        return <IDPhotoBackgroundChanger />
       default:
         return <ImageCompressor />
     }
