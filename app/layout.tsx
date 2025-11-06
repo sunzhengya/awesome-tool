@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ReactNode } from 'react'
+import { Toaster } from 'sonner'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -14,7 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh">
-      <body>{children}</body>
+      <head>
+        <script async src="https://docs.opencv.org/4.9.0/opencv.js" type="text/javascript"></script>
+      </head>
+      <body>
+        {children}
+        <Toaster position="top-center" richColors />
+      </body>
     </html>
   )
 } 

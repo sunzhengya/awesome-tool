@@ -1,7 +1,7 @@
 'use client'
 
 import { ReactNode } from 'react'
-import { Image, Menu, X, Type } from 'lucide-react'
+import { Image, Menu, X, Type, Eraser } from 'lucide-react'
 import { useState } from 'react'
 
 interface LayoutProps {
@@ -22,6 +22,12 @@ const tools = [
     name: '图片水印',
     icon: Type,
     description: '为图片添加自定义文字水印'
+  },
+  {
+    id: 'watermark-remover',
+    name: '去除水印',
+    icon: Eraser,
+    description: '选择区域去除图片中的水印'
   }
 ]
 
